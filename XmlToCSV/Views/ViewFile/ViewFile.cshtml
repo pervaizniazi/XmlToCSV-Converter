@@ -1,0 +1,24 @@
+﻿@model IEnumerable<XmlToCSV.Models.FileView>
+
+@{
+    ViewBag.Title = "Parse Files";
+}
+<table class="table table-bordered table-responsive table-hover">
+    <tr>
+
+        <th>File  Name </th>
+        <th>Parse </th>
+    </tr>
+    @foreach (var d in Model)
+    {
+        <tr>
+
+            <td>@d.FileName</td>
+
+            <td>
+                @*<input type="button" value="Parse" onclick="location.href='@Url.Action("Parse", "XmlParser")?name=@d.FileName.ToString()" />*@
+                <button type="button" class="btn btn-default active" onclick="location.href='@Url.Action("Parse", "XmlParser", new { name = @d.FileName.ToString() })'">Parse</button>
+            </td>
+        </tr>
+    }
+</table> 

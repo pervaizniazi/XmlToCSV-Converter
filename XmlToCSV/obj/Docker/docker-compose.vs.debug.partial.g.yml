@@ -1,0 +1,41 @@
+version: '3.4'
+
+services:
+  uploaderparserapi:
+    image: uploaderparserapi:dev
+    build:
+      target: base
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - NUGET_PACKAGES=C:\.nuget\packages
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_uploaderparserapi$
+    volumes:
+      - E:\Task\XmlToCSV\UploaderParserApi:C:\app
+      - C:\Users\Gulraiz\onecoremsvsmon\15.0.27703.2026:C:\remote_debugger:ro
+#$nuget_volume_mapping_uploaderparserapi$
+    entrypoint: C:\\remote_debugger\\x64\\msvsmon.exe /noauth /anyuser /silent /nostatus /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /timeout:2147483646
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "\"C:\\Program Files\\dotnet\\dotnet.exe\""
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_uploaderparserapi$ bin\\Debug\\netcoreapp2.1\\UploaderParserApi.dll"
+      com.microsoft.visualstudio.debuggee.workingdirectory: "C:\\app"
+      com.microsoft.visualstudio.debuggee.killprogram: "C:\\remote_debugger\\x64\\utils\\KillProcess.exe dotnet.exe"
+
+  xmltocsv:
+    image: xmltocsv:dev
+    build:
+      target: base
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - NUGET_PACKAGES=C:\.nuget\packages
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_xmltocsv$
+    volumes:
+      - E:\Task\XmlToCSV\XmlToCSV:C:\app
+      - C:\Users\Gulraiz\onecoremsvsmon\15.0.27703.2026:C:\remote_debugger:ro
+#$nuget_volume_mapping_xmltocsv$
+    entrypoint: C:\\remote_debugger\\x64\\msvsmon.exe /noauth /anyuser /silent /nostatus /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /timeout:2147483646
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "\"C:\\Program Files\\dotnet\\dotnet.exe\""
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_xmltocsv$ bin\\Debug\\netcoreapp2.1\\XmlToCSV.dll"
+      com.microsoft.visualstudio.debuggee.workingdirectory: "C:\\app"
+      com.microsoft.visualstudio.debuggee.killprogram: "C:\\remote_debugger\\x64\\utils\\KillProcess.exe dotnet.exe"
+

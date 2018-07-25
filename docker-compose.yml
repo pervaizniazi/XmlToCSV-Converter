@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  xmltocsv:
+    image: ${DOCKER_REGISTRY}xmltocsv
+    build:
+      context: .
+      dockerfile: XmlToCSV\Dockerfile
+   
+
+  uploaderparserapi:
+    image: ${DOCKER_REGISTRY}uploaderparserapi
+    build:
+      context: .
+      dockerfile: UploaderParserApi\Dockerfile
+
+
+
+

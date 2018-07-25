@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<br />
+<br />
+@*<ul>
+        @foreach (IFileInfo item in Model)
+        {
+            if (item.IsDirectory)
+            {
+                <li><strong>@item.Name</strong> - Directory</li>
+            }
+            else
+            {
+                <li><strong>@item.Name</strong> - @item.PhysicalPath </li>
+            }
+        }
+
+    </ul>*@
+<form asp-controller="XmlParser" asp-action="UploadFile" method="post"
+      enctype="multipart/form-data">
+
+    <input type="file" name="file" accept=".xml" />
+    <br />
+    <button type="submit">Upload File</button>
+</form>

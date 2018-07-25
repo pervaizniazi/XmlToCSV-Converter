@@ -1,0 +1,9 @@
+E:\Task\XmlToCSV\RabbitMQ\bin\Release\netstandard2.0\RabbitMQ.deps.json
+E:\Task\XmlToCSV\RabbitMQ\bin\Release\netstandard2.0\RabbitMQ.dll
+E:\Task\XmlToCSV\RabbitMQ\bin\Release\netstandard2.0\RabbitMQ.pdb
+E:\Task\XmlToCSV\RabbitMQ\obj\Release\netstandard2.0\RabbitMQ.csprojAssemblyReference.cache
+E:\Task\XmlToCSV\RabbitMQ\obj\Release\netstandard2.0\RabbitMQ.csproj.CoreCompileInputs.cache
+E:\Task\XmlToCSV\RabbitMQ\obj\Release\netstandard2.0\RabbitMQ.AssemblyInfoInputs.cache
+E:\Task\XmlToCSV\RabbitMQ\obj\Release\netstandard2.0\RabbitMQ.AssemblyInfo.cs
+E:\Task\XmlToCSV\RabbitMQ\obj\Release\netstandard2.0\RabbitMQ.dll
+E:\Task\XmlToCSV\RabbitMQ\obj\Release\netstandard2.0\RabbitMQ.pdb

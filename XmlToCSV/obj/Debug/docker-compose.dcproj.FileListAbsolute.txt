@@ -1,0 +1,1 @@
+E:\Task\XmlToCSV\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
